@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.example.hinduhelp.ui.dashboard.dashboard"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_add"
+            app:destination="@id/nav_add" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_slideshow"
+            app:destination="@id/nav_slideshow" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_tools"
+            app:destination="@id/nav_tools" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_send"
+            app:destination="@id/nav_about" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_add"
+        android:name="com.example.hinduhelp.ui.add.add"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_add" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.hinduhelp.ui.helplist.helplistFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_helplist" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.example.hinduhelp.ui.tools.ToolsFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_tools" />
+
+
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.hinduhelp.ui.about.aboutFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" />
+</navigation>

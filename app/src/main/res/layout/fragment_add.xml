@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteTextColor"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp">
+
+        <com.google.android.material.textfield.TextInputEditText
+android:id="@+id/addname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterMaxLength="10"
+        app:counterEnabled="true"
+        android:layout_margin="@dimen/_10sdp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:hint="Phone no" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:hint="Email" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/adddisc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:hint="Describe Your Help"
+                android:gravity="top"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:hint="Address"
+            android:gravity="top"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="@dimen/_10sdp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addpincode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLines="1"
+
+            android:hint="Pincode" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/_10sdp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State:-   "/>
+        <Spinner
+            android:id="@+id/add_State"
+
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_toRightOf="@id/firstname"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:entries="@array/House_block_no"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_20sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="District:-"/>
+        <Spinner
+            android:id="@+id/add_district"
+
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_toRightOf="@id/firstname"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:backgroundTint="@color/colorPrimaryDark"
+
+            />
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_20sdp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Which Type Of Help Needed:-  "/>
+            <Spinner
+                android:id="@+id/add_type"
+
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_toRightOf="@id/firstname"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:entries="@array/typehelp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:backgroundTint="@color/colorPrimaryDark"
+
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_20sdp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How Help Is Needed:-  "/>
+            <Spinner
+                android:id="@+id/add_time"
+
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_toRightOf="@id/firstname"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:entries="@array/helpu"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:backgroundTint="@color/colorPrimaryDark"
+
+                />
+
+        </LinearLayout>
+<Button
+    android:id="@+id/add_btn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Help Add"
+    android:background="@drawable/buttonadd"
+    android:textColor="@color/whiteTextColor"
+    android:textStyle="bold"
+
+    android:layout_margin="@dimen/_20sdp"
+    />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">hinduhelp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password*</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+
+
+    <string name="menu_home">Dashboard</string>
+    <string name="menu_gallery">Add Help</string>
+    <string name="menu_slideshow">List Of Help</string>
+    <string name="menu_tools">Profile</string>
+    <string name="menu_about">About us</string>
+
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="House_block_no">
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chhattisgarh</item>
+        <item>Dadra and Nagar Haveli</item>
+        <item>Daman and Diu</item>
+        <item>Delhi</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Orissa</item>
+        <item>Pondicherry</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Tripura</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+
+
+    </string-array>
+
+
+    <string-array name="House_Number_spinner">
+        <item>101</item>
+        <item>102</item>
+        <item>103</item>
+        <item>104</item>
+        <item>201</item>
+        <item>202</item>
+        <item>203</item>
+        <item>204</item>
+        <item>301</item>
+        <item>302</item>
+        <item>303</item>
+        <item>304</item>
+    </string-array>
+    <string-array name="typehelp">
+        <item>Medical</item>
+        <item>Travel</item>
+        <item>Accomodation</item>
+        <item>Dharmic</item>
+        <item>Legal</item>
+        <item>Government</item>
+
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="helpu">
+        <item>Emergency</item>
+        <item>Urgent</item>
+        <item>Normal</item>
+
+
+    </string-array>
+</resources>
