@@ -1,5 +1,7 @@
 package com.example.hinduhelp.ui.about;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +17,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.hinduhelp.R;
 
 public class aboutFragment extends Fragment {
-
+TextView t;
     private SendViewModel sendViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -23,13 +25,16 @@ public class aboutFragment extends Fragment {
         sendViewModel =
                 ViewModelProviders.of(this).get(SendViewModel.class);
         View root = inflater.inflate(R.layout.fragment_about, container, false);
-        final TextView textView = root.findViewById(R.id.text_send);
-        sendViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+t=root.findViewById(R.id.gourl);
+t.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(t.getText().toString()));
+        startActivity(browserIntent);
+    }
+});
         return root;
     }
+
+
 }

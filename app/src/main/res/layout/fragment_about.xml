@@ -1,19 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"/>
     <TextView
-        android:id="@+id/text_send"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_15sdp"
+android:textSize="17dp"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingRight="@dimen/_20sdp"
+        android:textColor="#000000"
+        android:text="HHL© Hindu Help Line, known as a 'Reliable Friend of Hindus', a FREE service available 24 × 7, launched in 2011 by Dr Pravin Togadia, renowned Cancer Surgeon with a vision to help Hindus in emergencies like in Travel, accidents, vehicle failures, blood donation, Darshan, language help in other states, routine legal aspects etc. With just 1 App and 1 call the HHL Volunteers all India come ahead to hold the callers hand and help FREE! HHL volunteers' wide network all India has helped millions of needy since launch. Anybody can be a volunteer of HHL and India Health Line IHL with our professional training. HHL Hindu Help Line: A Reliable Friend of Hindus. (HHL is a voluntary social service for routine emergencies only.)"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingRight="@dimen/_20sdp"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:text="To join us as Volunteer, click on the link here:"
+
+        />
+    <TextView
+        android:id="@+id/gourl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+       android:onClick="gourl"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingRight="@dimen/_20sdp"
+        android:textColor="#0384F4"
+        android:textSize="17dp"
+        android:text="https://forms.gle/wezgXCbWjcc2umobA"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingRight="@dimen/_20sdp">
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/help1"
+
+         />
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/help2"
+
+            />
+    </LinearLayout>
+</LinearLayout>

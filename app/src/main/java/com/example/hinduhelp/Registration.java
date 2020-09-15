@@ -985,7 +985,7 @@ public class Registration extends AppCompatActivity {
         }
 
         if (v == true) {
-            Toast.makeText(this, "registration", Toast.LENGTH_SHORT).show();
+
             Api api= ApiClient.getClient().create(Api.class);
 
             Call<CommanResponse> call =api.createUser("loginregistration",fname,lname,
