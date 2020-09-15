@@ -1,6 +1,5 @@
 package com.example.hinduhelp.ui.add;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,29 +9,22 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.hinduhelp.Loginactivity;
 import com.example.hinduhelp.R;
 import com.example.hinduhelp.apiinterface.Api;
 import com.example.hinduhelp.apiinterface.ApiClient;
 import com.example.hinduhelp.apiinterface.CommanResponse;
 import com.example.hinduhelp.apiinterface.get_set.User;
-import com.example.hinduhelp.password;
 import com.example.hinduhelp.storage.sareprefrencelogin;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-
-import javax.sql.StatementEvent;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -40,7 +32,7 @@ import retrofit2.Response;
 
 public class add extends Fragment {
     EditText name,add,phn,email,pincode,disc;
-    Spinner st,n,ty,ti;
+    Spinner st,n,ty,ti,sub;
     Button val;
     User user;
     ArrayAdapter<String> adapter;
@@ -750,6 +742,31 @@ public class add extends Fragment {
             "Uttar Dinajpur"
     };
 
+
+
+    String[] Medical = new String[] {
+            "Doctor", "Hospital", "Blood"
+    };
+    String[] Travel = new String[] {
+            "Train","Bus","Car"
+    };
+
+    String[] Accomodation = new String[] {
+            "Dharamshala"
+    };
+
+    String[] Dharmic = new String[] {
+            "Dharmik Book", "Yagya Havan", "Pooja", "Pandit", "Others"
+    };
+
+    String[] Legal = new String[] {
+            "Legal"
+    };
+
+    String[] Government = new String[] {
+            "Government"
+    };
+
     private GalleryViewModel galleryViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -768,6 +785,9 @@ public class add extends Fragment {
         n=(Spinner) root.findViewById(R.id.add_district);
         ty=(Spinner) root.findViewById(R.id.add_type);
         ti=(Spinner) root.findViewById(R.id.add_time);
+        sub=(Spinner) root.findViewById(R.id.add_type_sub);
+
+
        val=(Button) root.findViewById(R.id.add_btn);
 
         user= sareprefrencelogin.getInstance(getContext()).getuser();
@@ -782,13 +802,35 @@ public class add extends Fragment {
 
 
 
-
         st.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String stateName = adapterView.getItemAtPosition(i).toString();
 
                 setDistrict(stateName);
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+
+
+
+
+
+
+
+        ty.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String type = adapterView.getItemAtPosition(i).toString();
+
+                setsubtype(type);
 
 
             }
@@ -819,6 +861,7 @@ public class add extends Fragment {
                String dis=n.getSelectedItem().toString();
                String htype=ty.getSelectedItem().toString();
                String need=ti.getSelectedItem().toString();
+               String subq=sub.getSelectedItem().toString();
 
 
                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
@@ -843,19 +886,14 @@ public class add extends Fragment {
                    phn.setError("Enter Mobile Number");
 
                }
-               if(!mail.isEmpty()) {
-                   if (!mail.matches(emailPattern)) {
-                       email.setError("Enter Email");
-
-                   }
-               }
+              
 
                String dat =new SimpleDateFormat("dd-MM-yyyy", Locale.US).format(new Date());
-String h="Your Request Under Processing";
+String h="Request Under Processing";
                Api api= ApiClient.getClient().create(Api.class);
 
                Call<CommanResponse> call =api.addhelp("helpadd",fname,mobno,mail,adr,pin,state,dis,htype,need,
-                       dat,"0",h,h,discc,user.getId()+"");
+                       dat,"0",h,h,discc,user.getId()+"",subq);
                call.enqueue(new Callback<CommanResponse>() {
                    @Override
                    public void onResponse(Call<CommanResponse> call, Response<CommanResponse> response) {
@@ -1059,5 +1097,44 @@ String h="Your Request Under Processing";
         }
 
 
+    }
+
+
+
+
+
+    public void setsubtype(String str) {
+        switch (str) {
+            case "Medical":
+                adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, Medical);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                sub.setAdapter(adapter);
+                break; // optional
+            case "Travel":
+                adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, Travel);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                sub.setAdapter(adapter);
+                break; // optional
+            case "Accomodation":
+                adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, Accomodation);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                sub.setAdapter(adapter);
+                break; // optional
+            case "Dharmic":
+                adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, Dharmic);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                sub.setAdapter(adapter);
+                break; // optional
+            case "Legal":
+                adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, Legal);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                sub.setAdapter(adapter);
+                break; // optional
+            case "Government":
+                adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, Government);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                sub.setAdapter(adapter);
+                break; // optional
+        }
     }
 }

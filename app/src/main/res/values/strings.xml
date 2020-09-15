@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">hinduhelp</string>
+    <string name="app_name">Hindu Helpline</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -15,10 +15,10 @@
 
 
     <string name="menu_home">Dashboard</string>
-    <string name="menu_gallery">Add Help</string>
-    <string name="menu_slideshow">List Of Help</string>
+    <string name="menu_gallery">Ask For Help</string>
+    <string name="menu_slideshow">Help Status</string>
     <string name="menu_tools">Profile</string>
-    <string name="menu_about">About us</string>
+    <string name="menu_about">About Us</string>
 
 
 

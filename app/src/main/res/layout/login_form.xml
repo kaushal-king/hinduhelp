@@ -38,28 +38,9 @@
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputPassword"
-            style="@style/parent"
-            app:passwordToggleEnabled="true"
 
-            android:layout_marginTop="@dimen/loginViewsMargin">
-            <EditText
-                android:id="@+id/password"
-                style="@style/modifiedEditText"
-                android:hint="@string/login_password_hint"
-                android:maxLines="1"
-                android:inputType="textPassword"/>
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            style="@style/viewParent"
-            android:text="Forgot Password?"
-            android:textColor="@color/primaryTextColor"
-            android:textSize="@dimen/newsMoreTextSize"
-            android:layout_gravity="end"
-            android:onClick="viewForgotPAssword"
-            android:layout_marginTop="10dp"/>
+
 
         <Button
             android:layout_width="163dp"

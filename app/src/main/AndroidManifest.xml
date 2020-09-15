@@ -10,8 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".password" />
-        <activity android:name=".Forgotpassword_form" />
         <activity android:name=".Registration" />
         <activity android:name=".Otpverification.forget_pass_change" />
         <activity android:name=".Otpverification.Forgetpassword_otp" />

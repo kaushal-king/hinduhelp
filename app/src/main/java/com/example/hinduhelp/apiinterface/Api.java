@@ -29,8 +29,8 @@ public interface Api {
             @Field("address") String address,
             @Field("pincode") String pincode,
             @Field("state") String state,
-            @Field("dist") String dist,
-            @Field("pass") String pass
+            @Field("dist") String dist
+
 
     );
 
@@ -56,8 +56,7 @@ public interface Api {
     Call<loginresponce> login(
 
             @Field("loginuser") String loginuser,
-            @Field("mobileno") String mobileno,
-            @Field("pass") String pass
+            @Field("mobileno") String mobileno
     );
 
     @FormUrlEncoded
@@ -79,19 +78,13 @@ public interface Api {
             @Field("helper") String helper,
             @Field("hmob") String hmob,
             @Field("hdisc") String hdisc,
-            @Field("uid") String uid
+            @Field("uid") String uid,
+            @Field("subhelp") String subhelp
 
 
     );
 
-    @FormUrlEncoded
-    @POST("prof.php")
-    Call<prof_responce> profpass(
-            @Field("profilepassupdate") String profilepassupdate,
-            @Field("mobno") String mobno,
-            @Field("oldpassword") String oldpassword,
-            @Field("newpassword") String newpassword
-    );
+
 
     @FormUrlEncoded
     @POST("prof.php")
@@ -105,25 +98,12 @@ public interface Api {
             @Field("uid") String uid
     );
 
-    @FormUrlEncoded
-    @POST("loginapi.php")
-    Call<CommanResponse> mobnoex(
-            @Field("passmobnoex") String passmobnoex,
-            @Field("mobno") String mobno
-
-    );
 
 
 
 
-    @FormUrlEncoded
-    @POST("loginapi.php")
-    Call<CommanResponse> changepass(
-            @Field("changepass") String changepass,
-            @Field("mobno") String mobno,
-            @Field("password") String password
 
-    );
+
 
 //    @FormUrlEncoded
 //    @POST("noticeapi.php")

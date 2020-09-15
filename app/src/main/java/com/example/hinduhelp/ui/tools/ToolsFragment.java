@@ -34,7 +34,7 @@ import retrofit2.Response;
 
 public class ToolsFragment extends Fragment {
     TextView name,mob;
-    TextView log,personal,change;
+    TextView log;
     AlertDialog.Builder builder;
 
 
@@ -138,70 +138,6 @@ public class ToolsFragment extends Fragment {
 
 
 
-        root.findViewById(R.id.changepass_pro).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                builder= new AlertDialog.Builder(getContext());
-                LayoutInflater inflater=(LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                View v=inflater.inflate(R.layout.fragment_forgetpassword,null);
-                builder.setView(v);
-                builder.setCancelable(true);
-                final AlertDialog alert=builder.create();
-
-                final User user= sareprefrencelogin.getInstance(getContext()).getuser();
-//                String fname=user.getFname();
-//                String lname=user.getLname();
-//                String email=user.getEmail()+" ";
-//                String mob=user.getMobno();
-
-                final EditText ecpass,enewpass,ecnewpass;
-                Button save;
-                ecpass=v.findViewById(R.id.chngopass);
-                enewpass=v.findViewById(R.id.chngnpass);
-                ecnewpass=v.findViewById(R.id.chngchecknpass);
-
-                save=v.findViewById(R.id.savebtn_change);
-
-                save.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        if (enewpass.getText().toString().equals(ecnewpass.getText().toString())) {
-                            Api api = ApiClient.getClient().create(Api.class);
-
-                            Call<prof_responce> call = api.profpass("profilepersonal", user.getMobileno() + "",
-                                    ecpass.getText()+"",
-                                    enewpass.getText()+"");
-                            call.enqueue(new Callback<prof_responce>() {
-                                @Override
-                                public void onResponse(Call<prof_responce> call, Response<prof_responce> response) {
-
-                                    if (response.body().getSuccess()==200) {
-                                        Toast.makeText(getContext(), response.body().getMessage()+"", Toast.LENGTH_SHORT).show();
-                                        alert.dismiss();
-                                    }
-                                    else
-                                    {
-                                        Toast.makeText(getContext(), response.body().getMessage()+"", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-
-                                @Override
-                                public void onFailure(Call<prof_responce> call, Throwable t) {
-                                    Toast.makeText(getContext(), t.getLocalizedMessage()+"", Toast.LENGTH_SHORT).show();
-                                }
-                            });
-                        }else {
-                            ecnewpass.setError("Password Doesn`t Match");
-                        }
-                    }
-                });
-
-                //alert.dismiss();
-
-                alert.show();
-
-            }
-        });
 
         return root;
     }

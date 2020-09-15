@@ -11,7 +11,15 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.hinduhelp.apiinterface.Api;
+import com.example.hinduhelp.apiinterface.ApiClient;
+import com.example.hinduhelp.apiinterface.CommanResponse;
+
 import java.util.Date;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class Registration extends AppCompatActivity {
     EditText fn,ln,mn,ma,add,pin;
@@ -963,12 +971,7 @@ public class Registration extends AppCompatActivity {
             mn.setError("Enter Mobile Number");
             v=false;
         }
-        if(!email.isEmpty()) {
-            if (!email.matches(emailPattern)) {
-                ma.setError("Enter Email");
-                v = false;
-            }
-        }
+
 
         if (addr.isEmpty()){
             add.setError("Enter address");
@@ -983,16 +986,35 @@ public class Registration extends AppCompatActivity {
 
         if (v == true) {
             Toast.makeText(this, "registration", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(Registration.this, password.class);
-            i.putExtra("ifname",fname);
-            i.putExtra("ilname",lname);
-            i.putExtra("imobno",mobno);
-            i.putExtra("iemail",email);
-            i.putExtra("iadd",addr);
-            i.putExtra("ipin",pincode);
-            i.putExtra("dister",diste);
-            i.putExtra("state",state);
-            startActivity(i);
+            Api api= ApiClient.getClient().create(Api.class);
+
+            Call<CommanResponse> call =api.createUser("loginregistration",fname,lname,
+                    mobno,email,addr,pincode,state,diste);
+            call.enqueue(new Callback<CommanResponse>() {
+                @Override
+                public void onResponse(Call<CommanResponse> call, Response<CommanResponse> response) {
+                    if (response.body().getSuccess()==200) {
+
+
+                        Toast.makeText(Registration.this, response.body().getMessage()+"", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(getApplicationContext(), Loginactivity.class);
+                        startActivity(i);
+
+
+
+                    }
+                    else
+                    {
+                        Toast.makeText(Registration.this, response.body().getMessage()+"", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<CommanResponse> call, Throwable t) {
+                    Toast.makeText(Registration.this, t.getLocalizedMessage()+"", Toast.LENGTH_SHORT).show();
+                }
+            });
+
         }
 
 

@@ -7,7 +7,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 public class ApiClient {
 
   public static final String BASE_URL = "http://www.adityapanchal.in/hinduhelp/";
-   // public static final String BASE_URL = "http://192.168.0.105/hinduhelp/";
+  // public static final String BASE_URL = "http://192.168.0.105/hinduhelp/";
   //public static final String BASE_URL = "http://www.kaushaljethava.cf/building/";
 
     private static Retrofit retrofit = null;

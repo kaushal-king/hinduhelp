@@ -40,7 +40,7 @@ public class sareprefrencelogin {
         editor.putString("pincode",user.getPincode());
         editor.putString("state",user.getState());
         editor.putString("dist",user.getDist());
-        editor.putString("pass",user.getPass());
+
 
         editor.apply();
     }
@@ -60,8 +60,7 @@ return sharedPreferences.getInt("id",-1)!= -1;
         sharedPreferences.getString("address",null),
                 sharedPreferences.getString("pincode",null),
                 sharedPreferences.getString("state",null),
-                sharedPreferences.getString("dist",null),
-                sharedPreferences.getString("pass",null)
+                sharedPreferences.getString("dist",null)
 
 
 

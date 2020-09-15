@@ -20,7 +20,7 @@ import retrofit2.Response;
 
 public class Loginactivity extends AppCompatActivity {
     TextView re;
-    EditText no, pass;
+    EditText no;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class Loginactivity extends AppCompatActivity {
             }
         });
         no = (EditText) findViewById(R.id.mono);
-        pass = (EditText) findViewById(R.id.password);
+
 
 
     }
@@ -54,19 +54,14 @@ public class Loginactivity extends AppCompatActivity {
     }
 
 
-    public void viewForgotPAssword(View view) {
-        Intent i = new Intent(Loginactivity.this, Forgotpassword_form.class);
-        startActivity(i);
-
-    }
 
 
     public void login(View view) {
 
         String n=no.getText().toString();
-        String p=pass.getText().toString();
+
         Api api = ApiClient.getClient().create(Api.class);
-        Call<loginresponce> call=api.login("loginmember",n,p);
+        Call<loginresponce> call=api.login("loginmember",n);
         call.enqueue(new Callback<loginresponce>() {
             @Override
             public void onResponse(Call<loginresponce> call, Response<loginresponce> response) {

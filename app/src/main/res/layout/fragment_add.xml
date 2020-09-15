@@ -137,7 +137,7 @@ android:id="@+id/addname"
 
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_width="@dimen/_110sdp"
-            android:layout_toRightOf="@id/firstname"
+
             android:layout_height="wrap_content"
             android:spinnerMode="dialog"
 
@@ -162,7 +162,7 @@ android:id="@+id/addname"
 
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_width="@dimen/_110sdp"
-            android:layout_toRightOf="@id/firstname"
+
             android:layout_height="wrap_content"
             android:spinnerMode="dialog"
 
@@ -187,7 +187,7 @@ android:id="@+id/addname"
 
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_width="@dimen/_110sdp"
-                android:layout_toRightOf="@id/firstname"
+
                 android:layout_height="wrap_content"
                 android:spinnerMode="dialog"
                 android:entries="@array/typehelp"
@@ -197,6 +197,34 @@ android:id="@+id/addname"
                 />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_20sdp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sub Type Of Help:-  "/>
+            <Spinner
+                android:id="@+id/add_type_sub"
+
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:backgroundTint="@color/colorPrimaryDark"
+
+                />
+
+        </LinearLayout>
+
+
+
+
         <LinearLayout
             android:layout_margin="@dimen/_10sdp"
             android:layout_width="match_parent"
@@ -212,7 +240,7 @@ android:id="@+id/addname"
 
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_width="@dimen/_110sdp"
-                android:layout_toRightOf="@id/firstname"
+
                 android:layout_height="wrap_content"
                 android:spinnerMode="dialog"
                 android:entries="@array/helpu"

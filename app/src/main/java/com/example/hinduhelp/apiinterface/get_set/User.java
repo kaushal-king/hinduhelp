@@ -2,9 +2,9 @@ package com.example.hinduhelp.apiinterface.get_set;
 
 public class User {
     int id;
-    String fname,lname,mobileno,email,address,pincode,state,dist,pass;
+    String fname,lname,mobileno,email,address,pincode,state,dist;
 
-    public User(int id, String fname, String lname, String mobileno, String email, String address, String pincode, String state, String dist, String pass) {
+    public User(int id, String fname, String lname, String mobileno, String email, String address, String pincode, String state, String dist) {
         this.id = id;
         this.fname = fname;
         this.lname = lname;
@@ -14,7 +14,7 @@ public class User {
         this.pincode = pincode;
         this.state = state;
         this.dist = dist;
-        this.pass = pass;
+
     }
 
 
@@ -90,11 +90,5 @@ public class User {
         this.dist = dist;
     }
 
-    public String getPass() {
-        return pass;
-    }
 
-    public void setPass(String pass) {
-        this.pass = pass;
-    }
 }

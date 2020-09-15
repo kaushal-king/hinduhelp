@@ -160,7 +160,7 @@
             <Button
                 style="@style/loginButton"
                 android:layout_gravity="end"
-                android:text="Next"
+                android:text="Register"
                 android:onClick="pass"
                 android:layout_marginTop="@dimen/_10sdp"
                 />

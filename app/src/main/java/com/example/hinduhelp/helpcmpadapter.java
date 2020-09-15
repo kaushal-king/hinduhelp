@@ -1,6 +1,8 @@
 package com.example.hinduhelp;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +30,17 @@ public class helpcmpadapter extends RecyclerView.Adapter<helpcmpadapter.ViewHold
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View itemview = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cmplayout, null);
 
-        ViewHolder viewHolder=new ViewHolder(itemview);
+        final ViewHolder viewHolder=new ViewHolder(itemview);
+
+        viewHolder.hmob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String mo=data.get(viewHolder.getAdapterPosition()).getHmob();
+                Uri call = Uri.parse("tel:" + mo);
+                Intent o = new Intent(Intent.ACTION_DIAL, call);
+                mcontext.startActivity(o);
+            }
+        });
         return viewHolder;
     }
 

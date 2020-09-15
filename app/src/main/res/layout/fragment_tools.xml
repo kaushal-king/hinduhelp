@@ -135,36 +135,7 @@
                         android:layout_marginTop="@dimen/_10sdp"
 
                         />
-                    <ImageView
 
-                        android:id="@+id/changepass_pro_icon"
-                        android:layout_alignStart="@id/Personal_pro_icon"
-                        android:layout_width="@dimen/_30sdp"
-                        android:layout_marginTop="@dimen/_20sdp"
-                        android:layout_below="@id/Personal_pro_icon"
-                        android:layout_height="@dimen/_30sdp"
-                        android:src="@drawable/change" />
-                    <TextView
-                        android:id="@+id/changepass_pro"
-                        android:layout_toRightOf="@id/Personal_pro_icon"
-                        android:layout_width="match_parent"
-                        android:layout_below="@id/personal_pro"
-                        android:layout_height="@dimen/_30sdp"
-                        android:layout_marginTop="@dimen/_20sdp"
-                        android:gravity="center_vertical"
-                        android:layout_alignStart="@id/personal_pro"
-                        android:text="Change Password"
-                        android:textSize="18sp"
-                        android:textStyle="bold"/>
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="0.7dp"
-                        android:layout_marginRight="@dimen/_20sdp"
-                        android:layout_marginLeft="@dimen/_12sdp"
-                        android:background="@color/gray"
-                        android:layout_below="@id/changepass_pro"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        />
                     <ImageView
 
                         android:id="@+id/exit_pro_icon"
@@ -172,14 +143,14 @@
                         android:layout_width="@dimen/_30sdp"
                         android:layout_marginTop="@dimen/_20sdp"
 
-                        android:layout_below="@id/changepass_pro_icon"
+                        android:layout_below="@id/Personal_pro_icon"
                         android:layout_height="@dimen/_30sdp"
                         android:src="@drawable/exitr" />
                     <TextView
                         android:id="@+id/exit_pro"
                         android:layout_toRightOf="@id/Personal_pro_icon"
                         android:layout_width="match_parent"
-                        android:layout_below="@id/changepass_pro"
+                        android:layout_below="@id/personal_pro"
                         android:layout_height="@dimen/_30sdp"
                         android:layout_marginTop="@dimen/_20sdp"
                         android:gravity="center_vertical"

@@ -102,7 +102,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/_6sdp"
-                            android:text="Add Help"
+                            android:text="Ask For Help"
 
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -224,7 +224,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="About us"
+                            android:text="About Us"
 
 
                             android:textSize="14sp"
