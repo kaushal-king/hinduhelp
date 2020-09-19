@@ -20,7 +20,9 @@
     <string name="menu_tools">Profile</string>
     <string name="menu_about">About Us</string>
 
-
+    <string name="cmpname">
+        <u>TouchnTap Technologies</u>
+    </string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string-array name="House_block_no">
@@ -79,7 +81,7 @@
         <item>Medical</item>
         <item>Travel</item>
         <item>Accomodation</item>
-        <item>Dharmic</item>
+        <item>Dharmik</item>
         <item>Legal</item>
         <item>Government</item>
 

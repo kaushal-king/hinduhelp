@@ -261,5 +261,12 @@ android:id="@+id/addname"
 
     android:layout_margin="@dimen/_20sdp"
     />
+        <ProgressBar
+            android:id="@+id/addprog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
     </LinearLayout>
 </ScrollView>

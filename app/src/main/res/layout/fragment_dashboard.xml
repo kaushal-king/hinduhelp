@@ -32,6 +32,15 @@
 
 
                     android:background="@drawable/logounder" />
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_65sdp"
+                    android:layout_marginLeft="@dimen/_100sdp"
+
+
+                    android:background="@drawable/home" />
             </FrameLayout>
 
             <TextView
@@ -41,7 +50,7 @@
                 android:ellipsize="marquee"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:fontFamily="sans-serif-light"
+                android:fontFamily="serif"
                 android:freezesText="true"
                 android:marqueeRepeatLimit="marquee_forever"
                 android:paddingLeft="20dip"
@@ -52,10 +61,11 @@
                 android:shadowDy="0"
                 android:shadowRadius="3"
                 android:singleLine="true"
-                android:text="...Welcome to Hindu Help Line..."
-                android:textColor="@color/colorPrimary"
+                android:text="Welcome to Hindu Helpline"
+                android:textColor="#FF5722"
                 android:textSize="24sp"
-                android:textStyle="italic|bold" />
+android:textStyle="bold"
+                />
 
             <GridLayout
                 android:layout_width="match_parent"

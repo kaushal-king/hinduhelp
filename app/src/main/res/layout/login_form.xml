@@ -48,10 +48,18 @@
             android:id="@+id/loginbutton"
             style="@style/loginButton"
             android:background="@drawable/registration_br"
-            android:text="Login"
+            android:text="Ask For Help"
             android:onClick="login"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/loginViewsMargin"/>
+        <ProgressBar
+            android:id="@+id/logprog"
+            android:visibility="gone"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
 
         <TextView
             style="@style/parent"

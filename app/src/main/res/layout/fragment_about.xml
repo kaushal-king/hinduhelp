@@ -72,5 +72,151 @@ android:textSize="17dp"
 
             />
     </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            />
+        <TextView
+            android:id="@+id/title_inquery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="cursive"
+            android:gravity="center_horizontal"
+            android:text="Developed By"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/bottom_design2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/title_inquery"
+            android:layout_gravity="center"
+            android:src="@drawable/textbottom" />
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/bottom_design2"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+
+
+            <ImageView
+                android:id="@+id/image_shop"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+
+                android:layout_marginTop="@dimen/_13sdp"
+
+                android:src="@drawable/shop_image" />
+
+            <TextView
+                android:id="@+id/samratshop"
+                style="@style/textsize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+android:textStyle="bold"
+
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toRightOf="@id/image_shop"
+                android:text="@string/cmpname"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/text_shop"
+
+                style="@style/textsize1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/samratshop"
+                android:layout_alignLeft="@id/samratshop"
+                android:text="Company Name"
+                android:textColor="@color/color_siment"
+                android:layout_alignStart="@+id/samratshop"/>
+
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/image_shop"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:alpha="0.5"
+
+                 />
+
+            <ImageView
+                android:id="@+id/image_email"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_below="@id/view3"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:src="@drawable/email_icon" />
+
+            <TextView
+                android:id="@+id/samratjewellersgmail"
+                style="@style/textsize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view3"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toRightOf="@id/image_email"
+                android:onClick="gmailclick"
+
+                android:text="kaushaljethava12@gmail.com"
+                android:textColor="@color/black"
+                android:textIsSelectable="true" />
+
+            <ImageView
+                android:id="@+id/copyimage"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_below="@id/view3"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:onClick="copyonclick"
+                android:src="@drawable/copy_image" />
+
+            <TextView
+                android:id="@+id/text_email"
+
+                style="@style/textsize1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/samratjewellersgmail"
+                android:layout_alignLeft="@id/samratjewellersgmail"
+                android:text="Email"
+                android:layout_alignStart="@+id/samratshop"
+                android:textColor="@color/color_siment" />
+
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/image_email"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:alpha="0.5"
+
+                />
+
+
+        </RelativeLayout>
+
     </LinearLayout>
 </ScrollView>

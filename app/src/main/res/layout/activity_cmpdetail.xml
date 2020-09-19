@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/title_inquery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="cursive"
+        android:gravity="center_horizontal"
+        android:text="Developer Details"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/bottom_design2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/title_inquery"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/textbottom" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bottom_design2"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <TextView
+
+            android:id="@+id/mobile_number_91"
+            style="@style/textsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:linksClickable="true"
+            android:text="(+91)"
+            android:textColor="@color/black" />
+
+        <TextView
+
+            android:id="@+id/mobile_number_contact"
+            style="@style/textsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/mobile_number_91"
+            android:linksClickable="true"
+
+            android:text="73838 846827"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/text_mobile"
+
+            style="@style/textsize1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mobile_number_contact"
+
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Mobile"
+            android:textColor="@color/color_siment" />
+
+        <ImageView
+            android:id="@+id/image_call"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_toLeftOf="@id/view_line"
+            android:onClick="callclick"
+            android:src="@drawable/callicon" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="1dp"
+            android:layout_height="@dimen/_25sdp"
+
+
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_toLeftOf="@id/image_message"
+            android:background="@color/color_siment" />
+
+        <ImageView
+            android:id="@+id/image_message"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:onClick="smsonclick"
+
+            android:src="@drawable/message_icon" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/text_mobile"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:alpha="0.5"
+            android:background="@color/color_siment" />
+
+        <ImageView
+            android:id="@+id/image_shop"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_below="@id/view2"
+            android:layout_marginTop="@dimen/_13sdp"
+
+            android:src="@drawable/shop_image" />
+
+        <TextView
+            android:id="@+id/samratshop"
+            style="@style/textsize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view2"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toRightOf="@id/image_shop"
+            android:text="Touch'nTap Technologies"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/text_shop"
+
+            style="@style/textsize1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/samratshop"
+            android:layout_alignLeft="@id/samratshop"
+            android:text="Company Name"
+            android:textColor="@color/color_siment" />
+
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/image_shop"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:alpha="0.5"
+
+             />
+
+        <ImageView
+            android:id="@+id/image_email"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_below="@id/view3"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:src="@drawable/email_icon" />
+
+        <TextView
+            android:id="@+id/samratjewellersgmail"
+            style="@style/textsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view3"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toRightOf="@id/image_email"
+            android:onClick="gmailclick"
+            android:text="touchntaptechnologies@gmail.com"
+            android:textColor="@color/black"
+            android:textIsSelectable="true" />
+
+        <ImageView
+            android:id="@+id/copyimage"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_below="@id/view3"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:onClick="copyonclick"
+            android:src="@drawable/copy_image" />
+
+        <TextView
+            android:id="@+id/text_email"
+
+            style="@style/textsize1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/samratjewellersgmail"
+            android:layout_alignLeft="@id/samratjewellersgmail"
+            android:text="Email"
+            android:textColor="@color/color_siment" />
+
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/image_email"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:alpha="0.5"
+
+             />
+
+        <ImageView
+            android:id="@+id/image_wesite"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_below="@id/view4"
+            android:layout_marginTop="@dimen/_10sdp"
+
+
+            android:src="@drawable/dev" />
+
+        <TextView
+            android:id="@+id/wesitename"
+            style="@style/textsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view4"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toRightOf="@id/image_wesite"
+
+
+            android:text="Kaushal Jethava"
+            android:textColor="@color/black" />
+        <!-- <ImageView
+             android:layout_width="@dimen/_20sdp"
+             android:layout_height="@dimen/_15sdp"
+             android:layout_marginTop="@dimen/_12sdp"
+
+             android:src="@drawable/copy_image"
+             android:layout_below="@id/view4"
+             android:layout_alignParentRight="true"/>-->
+        <TextView
+            android:id="@+id/text_website"
+            style="@style/textsize1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wesitename"
+            android:layout_alignLeft="@id/wesitename"
+
+            android:text="Developer"
+            android:textColor="@color/color_siment"
+            android:textIsSelectable="true" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/image_wesite"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:alpha="0.5"
+
+            />
+
+        <ImageView
+            android:id="@+id/image_address"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_below="@id/view5"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:src="@drawable/dev" />
+
+        <TextView
+            android:id="@+id/addressname"
+            style="@style/textsize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view5"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toRightOf="@id/image_address"
+
+            android:text="Aditya Panchal"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/text_dev"
+            style="@style/textsize1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressname"
+            android:layout_alignLeft="@id/addressname"
+
+            android:text="Developer"
+            android:textColor="@color/color_siment"
+            android:textIsSelectable="true" />
+
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/text_dev"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+
+            android:alpha="0.5"
+
+            />
+
+        <ImageView
+            android:id="@+id/imag"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_below="@id/view6"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:src="@drawable/dev" />
+
+        <TextView
+            android:id="@+id/addressname2"
+            style="@style/textsize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view6"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toRightOf="@id/imag"
+
+            android:text="Kuldeep Jethava"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/text_dev2"
+            style="@style/textsize1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressname2"
+            android:layout_alignLeft="@id/addressname2"
+
+            android:text="Developer"
+            android:textColor="@color/color_siment"
+            android:textIsSelectable="true" />
+    </RelativeLayout>
+</RelativeLayout>
