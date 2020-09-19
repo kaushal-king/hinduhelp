@@ -93,11 +93,13 @@ public interface Api {
             @Field("uid") String uid
     );
 
+    @FormUrlEncoded
+    @POST("loginapi.php")
+    Call<CommanResponse> mobnoex(
+            @Field("passmobnoex") String passmobnoex,
+            @Field("mobno") String mobno
 
-
-
-
-
+    );
 
 
 //    @FormUrlEncoded

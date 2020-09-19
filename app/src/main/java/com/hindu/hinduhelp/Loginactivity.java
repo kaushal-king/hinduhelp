@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.hindu.hinduhelp.apiinterface.Api;
 import com.hindu.hinduhelp.apiinterface.ApiClient;
+import com.hindu.hinduhelp.apiinterface.CommanResponse;
 import com.hindu.hinduhelp.apiinterface.responce.loginresponce;
 import com.hindu.hinduhelp.storage.sareprefrencelogin;
 
@@ -64,35 +65,46 @@ public class Loginactivity extends AppCompatActivity {
 
     public void login(View view) {
 
-        String n=no.getText().toString();
+        final String n=no.getText().toString();
 o.setVisibility(View.VISIBLE);
 b.setVisibility(View.GONE);
 
+
+
+
+        if (n.isEmpty() || n.length() < 10) {
+            no.setError("Enter a valid mobile");
+            no.requestFocus();
+            return;
+        }
+
         Api api = ApiClient.getClient().create(Api.class);
-        Call<loginresponce> call=api.login("loginmember",n);
-        call.enqueue(new Callback<loginresponce>() {
+        Call<CommanResponse> call = api.mobnoex("passmobnoex", n);
+        call.enqueue(new Callback<CommanResponse>() {
             @Override
-            public void onResponse(Call<loginresponce> call, Response<loginresponce> response) {
-                if (response.body().getSuccess()==405) {
-                    loginresponce loginresponce=response.body();
-                    sareprefrencelogin.getInstance(Loginactivity.this).saveuser(loginresponce.getUser());
-                    Intent i = new Intent(Loginactivity.this, MainActivity.class);
-                    startActivity(i);
-                    Toast.makeText(Loginactivity.this, response.body().getMessage()+"", Toast.LENGTH_SHORT).show();
+            public void onResponse(Call<CommanResponse> call, Response<CommanResponse> response) {
+                if (response.body().getSuccess()==200) {
+                    Intent intent = new Intent(Loginactivity.this, loginotp.class);
+                    intent.putExtra("mobile", n);
+                    startActivity(intent);
                 }
                 else
                 {
-                    Toast.makeText(Loginactivity.this, response.body().getMessage()+"", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Loginactivity.this, response.body().getMessage() + "", Toast.LENGTH_SHORT).show();
                     o.setVisibility(View.GONE);
                     b.setVisibility(View.VISIBLE);
                 }
+
             }
 
             @Override
-            public void onFailure(Call<loginresponce> call, Throwable t) {
-                Toast.makeText(Loginactivity.this, t.getLocalizedMessage()+"", Toast.LENGTH_SHORT).show();
+            public void onFailure(Call<CommanResponse> call, Throwable t) {
+                Toast.makeText(Loginactivity.this, t.getLocalizedMessage() + "", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+
 
 
 
