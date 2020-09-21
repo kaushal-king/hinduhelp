@@ -84,6 +84,8 @@ b.setVisibility(View.GONE);
             @Override
             public void onResponse(Call<CommanResponse> call, Response<CommanResponse> response) {
                 if (response.body().getSuccess()==200) {
+                    o.setVisibility(View.GONE);
+                    b.setVisibility(View.VISIBLE);
                     Intent intent = new Intent(Loginactivity.this, loginotp.class);
                     intent.putExtra("mobile", n);
                     startActivity(intent);
@@ -100,6 +102,8 @@ b.setVisibility(View.GONE);
             @Override
             public void onFailure(Call<CommanResponse> call, Throwable t) {
                 Toast.makeText(Loginactivity.this, t.getLocalizedMessage() + "", Toast.LENGTH_SHORT).show();
+                o.setVisibility(View.GONE);
+                b.setVisibility(View.VISIBLE);
             }
         });
 

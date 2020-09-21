@@ -176,7 +176,7 @@ android:textStyle="bold"
                 android:layout_toRightOf="@id/image_email"
                 android:onClick="gmailclick"
 
-                android:text="kaushaljethava12@gmail.com"
+                android:text="touchntaptechnologies@gmail.com"
                 android:textColor="@color/black"
                 android:textIsSelectable="true" />
 

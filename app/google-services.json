@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "266531217363",
-    "firebase_url": "https://hinduhelp-41657.firebaseio.com",
-    "project_id": "hinduhelp-41657",
-    "storage_bucket": "hinduhelp-41657.appspot.com"
+    "project_number": "697629762076",
+    "firebase_url": "https://hinduhelpadmin.firebaseio.com",
+    "project_id": "hinduhelpadmin",
+    "storage_bucket": "hinduhelpadmin.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:266531217363:android:f3fb2322ace6a6cb2fd926",
+        "mobilesdk_app_id": "1:697629762076:android:d52cdaeeaa187e7880f5d9",
         "android_client_info": {
           "package_name": "com.hindu.hinduhelp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "266531217363-srpto7kovlm3ovmpmf939sf2r8g3dkum.apps.googleusercontent.com",
+          "client_id": "697629762076-ql1jp26bo1p4glakvet8almfpnj17kdl.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.hindu.hinduhelp",
@@ -23,20 +23,20 @@
           }
         },
         {
-          "client_id": "266531217363-9sehe06aq4c7fq58dh6e2q1ncl2ofrtc.apps.googleusercontent.com",
+          "client_id": "697629762076-45pjqo7hirvgrcpgrtu2uf79ohk07f19.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCxSBOsTxqXyp4BAlrcTOkB42BrlX-d4x4"
+          "current_key": "AIzaSyDXtviN4Q2TnLg_1qkLB_TBM5TPu6JKTlA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "266531217363-9sehe06aq4c7fq58dh6e2q1ncl2ofrtc.apps.googleusercontent.com",
+              "client_id": "697629762076-45pjqo7hirvgrcpgrtu2uf79ohk07f19.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

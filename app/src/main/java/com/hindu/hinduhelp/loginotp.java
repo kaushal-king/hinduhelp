@@ -139,6 +139,7 @@ public class loginotp extends AppCompatActivity {
                     Intent i = new Intent(loginotp.this, MainActivity.class);
                     startActivity(i);
                     Toast.makeText(loginotp.this, response.body().getMessage()+"", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
                 else
                 {

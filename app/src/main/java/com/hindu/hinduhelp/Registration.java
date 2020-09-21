@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -22,6 +24,8 @@ import retrofit2.Response;
 public class Registration extends AppCompatActivity {
     EditText fn,ln,mn,ma,add,pin;
     Spinner st,dist;
+    ProgressBar r;
+    Button b;
     ArrayAdapter<String> adapter;
 
 
@@ -739,6 +743,9 @@ public class Registration extends AppCompatActivity {
         ma=(EditText) findViewById(R.id.mail);
         add=(EditText) findViewById(R.id.address);
         pin=(EditText) findViewById(R.id.pincode);
+        r=(ProgressBar) findViewById(R.id.regprog);
+        b=(Button) findViewById(R.id.regbut);
+r.setVisibility(View.INVISIBLE);
 
         st=(Spinner) findViewById(R.id.State);
         dist=(Spinner) findViewById(R.id.district);
@@ -984,6 +991,8 @@ public class Registration extends AppCompatActivity {
 
         if (v == true) {
 
+            r.setVisibility(View.VISIBLE);
+            b.setVisibility(View.INVISIBLE);
             Api api= ApiClient.getClient().create(Api.class);
 
             Call<CommanResponse> call =api.createUser("loginregistration",fname,lname,
@@ -992,6 +1001,7 @@ public class Registration extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<CommanResponse> call, Response<CommanResponse> response) {
                     if (response.body().getSuccess()==200) {
+
 
 
                         Toast.makeText(Registration.this, response.body().getMessage()+"", Toast.LENGTH_SHORT).show();
@@ -1004,12 +1014,16 @@ public class Registration extends AppCompatActivity {
                     else
                     {
                         Toast.makeText(Registration.this, response.body().getMessage()+"", Toast.LENGTH_SHORT).show();
+                        b.setVisibility(View.VISIBLE);
+                        r.setVisibility(View.INVISIBLE);
                     }
                 }
 
                 @Override
                 public void onFailure(Call<CommanResponse> call, Throwable t) {
                     Toast.makeText(Registration.this, t.getLocalizedMessage()+"", Toast.LENGTH_SHORT).show();
+                    b.setVisibility(View.VISIBLE);
+                    r.setVisibility(View.INVISIBLE);
                 }
             });
 
